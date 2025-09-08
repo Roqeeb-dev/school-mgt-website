@@ -41,7 +41,7 @@ export default function SetupPage() {
           Skip <ArrowRight className="h-5 w-5" />
         </Link>
         <Link
-          to=""
+          to="/setup/pricing"
           className="flex items-center justify-center gap-2 p-2 bg-[#F2BA1D] text-[#08183A] uppercase rounded-xl w-full sm:w-[200px] transition-all duration-300 ease-in-out hover:bg-[#d89d12] hover:text-white hover:shadow-lg hover:scale-105"
         >
           Next <ArrowRight className="h-5 w-5" />
