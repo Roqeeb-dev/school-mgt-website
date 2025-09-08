@@ -13,7 +13,7 @@ export default function AuthPage() {
       </div>
 
       {/* Right side */}
-      <div className="bg-white w-[400px] p-5 flex flex-col">
+      <div className="bg-white w-[400px] p-5 lg:p-10 flex flex-col">
         {/* Tabs */}
         <div className="flex items-center justify-center rounded-2xl mb-4 bg-gray-50">
           <Link
