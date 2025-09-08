@@ -125,6 +125,29 @@ export default function PaymentPage() {
           placeholder="Expiry Date"
           className="p-3 placeholder:text-gray-500 text-sm border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-[#F2BA1D] transition"
         />
+
+        {/* UPI id */}
+        <div className="col-span-1 md:col-span-2 flex flex-col gap-1">
+          <input
+            type="text"
+            name="upi-id"
+            id="upi-id"
+            placeholder="Enter your UPI ID"
+            className="p-3 placeholder:text-gray-500 text-sm border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-[#F2BA1D] transition"
+          />
+          <p className="text-xs text-gray-500">
+            Check your phone to confirm payment
+          </p>
+        </div>
+
+        {/* Confirm button */}
+        <input
+          type="submit"
+          name="submit"
+          id="submit"
+          value="Confirm"
+          className="col-span-1 md:col-span-2 bg-[#F2BA1D] text-white font-medium p-3 rounded-full shadow-sm cursor-pointer hover:bg-yellow-600 transition"
+        />
       </form>
     </section>
   );
