@@ -1,9 +1,9 @@
-import LandingPage from "../components/LandingPage";
+import { Outlet } from "react-router-dom";
 
 export default function OnboardingPage() {
   return (
     <div>
-      <LandingPage />
+      <Outlet />
     </div>
   );
 }

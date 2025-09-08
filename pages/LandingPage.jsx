@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import logo from "../src/assets/school-logo.png";
+import { Link } from "react-router-dom";
 
 export default function LandingPage() {
   return (
@@ -38,12 +39,15 @@ export default function LandingPage() {
 
       {/* Navigation buttons */}
       <div className="flex flex-col sm:flex-row items-center gap-3 text-sm font-semibold w-full sm:w-auto">
-        <button className="p-2 border-2 border-[#F2BA1D] rounded-xl w-full sm:w-[200px] transition-all duration-300 ease-in-out hover:bg-[#F2BA1D] hover:text-[#08183A] hover:shadow-lg hover:scale-105">
+        <Link className="p-2 border-2 border-[#F2BA1D] rounded-xl w-full sm:w-[200px] transition-all duration-300 ease-in-out hover:bg-[#F2BA1D] hover:text-[#08183A] hover:shadow-lg hover:scale-105">
           Already have an account?
-        </button>
-        <button className="flex items-center justify-center gap-2 p-2 bg-[#F2BA1D] text-[#08183A] uppercase rounded-xl w-full sm:w-[200px] transition-all duration-300 ease-in-out hover:bg-[#d89d12] hover:text-white hover:shadow-lg hover:scale-105">
+        </Link>
+        <Link
+          to="/setup"
+          className="flex items-center justify-center gap-2 p-2 bg-[#F2BA1D] text-[#08183A] uppercase rounded-xl w-full sm:w-[200px] transition-all duration-300 ease-in-out hover:bg-[#d89d12] hover:text-white hover:shadow-lg hover:scale-105"
+        >
           Next <ArrowRight className="h-5 w-5" />
-        </button>
+        </Link>
       </div>
     </main>
   );
