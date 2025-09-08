@@ -9,7 +9,7 @@ export default function SetupPage() {
   const stepMap = {
     "/setup": 1,
     "/setup/pricing": 2,
-    "/setup/details": 3,
+    "/setup/payment": 3,
     "/setup/finish": 4,
   };
 
@@ -19,7 +19,7 @@ export default function SetupPage() {
   const handleNext = () => {
     // navigate to the next step based on current step
     if (currentStep === 1) navigate("/setup/pricing");
-    else if (currentStep === 2) navigate("/setup/details");
+    else if (currentStep === 2) navigate("/setup/payment");
     else if (currentStep === 3) navigate("/setup/finish");
   };
 

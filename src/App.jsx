@@ -4,6 +4,7 @@ import LandingPage from "../pages/LandingPage";
 import SetupPage from "../pages/SetupPage";
 import UserForm from "../components/UserForm";
 import PricingCards from "../components/PricingCards";
+import PaymentPage from "../components/PaymentPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/setup" element={<SetupPage />}>
           <Route index element={<UserForm />} />
           <Route path="pricing" element={<PricingCards />} />
+          <Route path="payment" element={<PaymentPage />} />
         </Route>
       </Route>
     </Routes>
