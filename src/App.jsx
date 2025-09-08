@@ -6,6 +6,9 @@ import UserForm from "../components/UserForm";
 import PricingCards from "../components/PricingCards";
 import PaymentPage from "../components/PaymentPage";
 import Finished from "../components/Finished";
+import AuthPage from "../pages/AuthPage";
+import Register from "../components/Register";
+import Login from "../components/Login";
 
 function App() {
   return (
@@ -17,6 +20,10 @@ function App() {
           <Route path="pricing" element={<PricingCards />} />
           <Route path="payment" element={<PaymentPage />} />
           <Route path="finish" element={<Finished />} />
+        </Route>
+        <Route path="/auth" element={<AuthPage />}>
+          <Route path="register" element={<Register />} />
+          <Route path="login" element={<Login />} />
         </Route>
       </Route>
     </Routes>
