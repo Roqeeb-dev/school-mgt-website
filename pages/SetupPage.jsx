@@ -13,7 +13,7 @@ export default function SetupPage() {
     "/setup/finish": 4,
   };
 
-  const currentStep = stepMap[location.pathname] || 1; // default to 1
+  const currentStep = stepMap[location.pathname] || 1;
   const steps = [1, 2, 3, 4];
 
   const handleNext = () => {
@@ -59,7 +59,7 @@ export default function SetupPage() {
       <div className="flex flex-col sm:flex-row items-center justify-end gap-3 text-sm font-semibold w-full sm:w-auto">
         <Link
           to=""
-          className="flex items-center justify-center gap-2 p-2 border-2 border-[#F2BA1D] text-[#08183A] uppercase rounded-xl w-full sm:w-[200px] transition-all duration-300 ease-in-out hover:bg-[#d89d12] hover:text-white hover:shadow-lg hover:scale-105"
+          className="flex items-center justify-center gap-2 p-2 border-2 border-[#F2BA1D] text-[#F2BA1D] uppercase rounded-xl w-full sm:w-[200px] transition-all duration-300 ease-in-out hover:bg-[#d89d12] hover:text-white hover:shadow-lg hover:scale-105"
         >
           Skip <ArrowRight className="h-5 w-5" />
         </Link>
