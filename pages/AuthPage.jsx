@@ -6,10 +6,10 @@ export default function AuthPage() {
   const activeTab = location.pathname.includes("login") ? "Login" : "Register";
 
   return (
-    <main className="flex h-screen items-center justify-center">
-      <section className="flex w-[85%] h-[85vh] rounded-xl shadow-xl">
+    <main className="flex h-screen items-center justify-center bg-[url('../src/assets/laptop-bg-2.jpg')] bg-cover bg-center bg-no-repeat">
+      <section className="flex w-[85%] h-[85vh] rounded-3xl border-2 border-white shadow-xl overflow-hidden">
         {/* Left side */}
-        <div className="flex-1 flex items-center justify-center bg-red-800">
+        <div className="flex-1 flex items-center justify-center bg-[url('../src/assets/laptop-bg.jpg')] bg-cover bg-center bg-no-repeat ">
           <img src={logo} alt="Main logo" />
         </div>
 
