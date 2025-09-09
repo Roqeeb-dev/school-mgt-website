@@ -44,11 +44,7 @@ export default function SetupPage() {
             <div className="flex flex-col items-center">
               <p
                 className={`w-[40px] h-[40px] rounded-full flex items-center justify-center text-white text-lg font-semibold transition-colors
-            ${
-              step.step === currentStep
-                ? "bg-[#F2BA1D]" // active
-                : "bg-[#08183A]" // inactive
-            }`}
+            ${step.step === currentStep ? "bg-[#F2BA1D]" : "bg-[#08183A]"}`}
               >
                 {step.step}
               </p>
