@@ -21,6 +21,9 @@ export default function SetupPage() {
     if (currentStep === 1) navigate("/setup/pricing");
     else if (currentStep === 2) navigate("/setup/payment");
     else if (currentStep === 3) navigate("/setup/finish");
+    else {
+      navigate("/auth/login");
+    }
   };
 
   return (
