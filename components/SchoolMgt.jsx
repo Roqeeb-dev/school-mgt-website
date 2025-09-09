@@ -1,8 +1,8 @@
-import { Search, Plus } from "lucide-react";
+import { Search, Plus, Trash, Edit } from "lucide-react";
 
 export default function SchoolMgt() {
   return (
-    <div className="lg:p-10">
+    <div className="lg:p-5">
       {/* Top part */}
       <section>
         <div className="flex items-center space-x-6">
@@ -67,7 +67,61 @@ export default function SchoolMgt() {
       </section>
 
       {/* Table part */}
-      <section></section>
+      <section className="mt-5">
+        <table className="w-full border-collapse">
+          <thead>
+            <tr className="bg-gray-200 text-sm text-gray-800 font-medium">
+              <th className="p-3 text-left">S/No</th>
+              <th className="p-3 text-left">Sessions</th>
+              <th className="p-3 text-left">Start Date</th>
+              <th className="p-3 text-left">End Date</th>
+              <th className="p-3 text-left">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="text-sm text-gray-800 font-medium hover:bg-gray-50">
+              <td className="p-3 ">1</td>
+              <td className="p-3 ">Accounting</td>
+              <td className="p-3">September 1, 2025</td>
+              <td className="p-3">October 1, 2025</td>
+              <td>
+                <div className="flex items-center justify-start p-3 space-x-3">
+                  <Trash className="fill-yellow-500 h-5 w-5 cursor-pointer" />
+                  <Edit className="fill-yellow-500 h-5 w-5 cursor-pointer" />
+                </div>
+              </td>
+            </tr>
+
+            {/* Second table entry */}
+            <tr className="text-sm text-gray-800 font-medium hover:bg-gray-50">
+              <td className="p-3 ">2</td>
+              <td className="p-3 ">Inventory</td>
+              <td className="p-3">January 20, 2024</td>
+              <td className="p-3">April 5, 2024</td>
+              <td>
+                <div className="flex items-center justify-start p-3 space-x-3">
+                  <Trash className="fill-yellow-500 h-5 w-5 cursor-pointer" />
+                  <Edit className="fill-yellow-500 h-5 w-5 cursor-pointer" />
+                </div>
+              </td>
+            </tr>
+
+            {/* Third entry */}
+            <tr className="text-sm text-gray-800 font-medium hover:bg-gray-50">
+              <td className="p-3 ">3</td>
+              <td className="p-3 ">Examination</td>
+              <td className="p-3">June 26, 2024</td>
+              <td className="p-3">August 8, 2024</td>
+              <td>
+                <div className="flex items-center justify-start p-3 space-x-3">
+                  <Trash className="fill-yellow-500 h-5 w-5 cursor-pointer" />
+                  <Edit className="fill-yellow-500 h-5 w-5 cursor-pointer" />
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
     </div>
   );
 }
