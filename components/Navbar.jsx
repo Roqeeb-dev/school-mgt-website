@@ -4,7 +4,7 @@ import logo from "../src/assets/school-logo.png";
 
 export default function Navbar() {
   return (
-    <header className="p-3 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] flex items-center justify-between">
+    <header className="sticky top-0 p-3 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] flex items-center justify-between">
       {/* Logo */}
       <div className="flex items-center">
         <img src={logo} alt="Logo" className="w-10" />

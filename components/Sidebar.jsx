@@ -1,5 +1,7 @@
 import { MenuIcon, Eye, Database, PenLine } from "lucide-react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
+import Dropdown from "./Dropdown";
+import { useState } from "react";
 
 // Reusable styling function
 const navLinkClasses = ({ isActive }) =>
@@ -10,8 +12,21 @@ const navLinkClasses = ({ isActive }) =>
   }`;
 
 export default function Sidebar() {
+  const location = useLocation();
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  function handleClick(e) {
+    e.preventDefault(); // prevent instant navigation
+    setShowDropdown((prev) => !prev);
+  }
+
+  // Keep dropdown open if you're inside academics route
+  const isAcademicsActive = location.pathname.startsWith(
+    "/dashboard/academics"
+  );
+
   return (
-    <aside className="w-60 bg-[#08183A] px-3 py-4 flex flex-col gap-5 text-white">
+    <aside className="w-60 flex-none overflow-y-auto bg-[#08183A] px-3 py-4 flex flex-col gap-5 text-white">
       {/* User section */}
       <div className="flex items-center justify-between space-x-2">
         <NavLink
@@ -35,17 +50,25 @@ export default function Sidebar() {
         My School
       </NavLink>
 
-      {/* School Management */}
+      {/* School Management (no dropdown) */}
       <NavLink to="/dashboard/school-mgt" className={navLinkClasses}>
         <PenLine className="h-4 w-4" />
         School Management
       </NavLink>
 
-      {/* Academics link */}
-      <NavLink to="/dashboard/academics" className={navLinkClasses}>
-        <PenLine className="h-4 w-4" />
-        Academics
-      </NavLink>
+      {/* Academics with dropdown */}
+      <div>
+        <NavLink
+          to="/dashboard/academics"
+          className={navLinkClasses}
+          onClick={handleClick}
+        >
+          <PenLine className="h-4 w-4" />
+          Academics
+        </NavLink>
+
+        {(showDropdown || isAcademicsActive) && <Dropdown />}
+      </div>
     </aside>
   );
 }
