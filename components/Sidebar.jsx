@@ -1,5 +1,5 @@
 import { MenuIcon, Eye, Database, PenLine } from "lucide-react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import Dropdown from "./Dropdown";
 import { useState } from "react";
 
@@ -14,16 +14,12 @@ const navLinkClasses = ({ isActive }) =>
 export default function Sidebar() {
   const location = useLocation();
   const [showDropdown, setShowDropdown] = useState(false);
+  const navigate = useNavigate();
 
   function handleClick(e) {
-    e.preventDefault(); // prevent instant navigation
     setShowDropdown((prev) => !prev);
+    navigate("/dashboard/academics");
   }
-
-  // Keep dropdown open if you're inside academics route
-  const isAcademicsActive = location.pathname.startsWith(
-    "/dashboard/academics"
-  );
 
   return (
     <aside className="w-60 flex-none overflow-y-auto bg-[#08183A] px-3 py-4 flex flex-col gap-5 text-white">
@@ -67,7 +63,7 @@ export default function Sidebar() {
           Academics
         </NavLink>
 
-        {(showDropdown || isAcademicsActive) && <Dropdown />}
+        {showDropdown && <Dropdown />}
       </div>
     </aside>
   );
