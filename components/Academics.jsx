@@ -12,23 +12,28 @@ export default function Academics() {
     { label: "Events", to: "" },
     { label: "Live Classes (Go pro)", to: "" },
   ];
+
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-3 lg:gap-6">
-      {academicsData.map((entry) => {
-        return (
-          <div className="p-4 shadow-xl flex flex-col gap-4 border border-gray-300 rounded-xl">
-            <p className="font-semibold text-lg">{entry.label}</p>
-            <div className="flex items-center space-x-2 text-sm font-semibold w-full">
-              <button className="bg-[#F2BA1D] text-white p-1 rounded-xl text-center w-1/2">
-                View
-              </button>
-              <button className="p-1 rounded-xl border border-[#F2BA1D] text-[#F2BA1D] text-center w-1/2">
-                Add now
-              </button>
-            </div>
+    <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {academicsData.map((entry, index) => (
+        <div
+          key={index}
+          className="p-6 bg-white shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-gray-200 rounded-2xl flex flex-col justify-between"
+        >
+          {/* Label */}
+          <p className="font-semibold text-lg text-gray-800">{entry.label}</p>
+
+          {/* Action Buttons */}
+          <div className="flex items-center gap-3 mt-4">
+            <button className="bg-[#F2BA1D] hover:bg-[#d89d12] text-white px-4 py-2 rounded-xl text-sm font-semibold w-1/2 transition">
+              View
+            </button>
+            <button className="px-4 py-2 rounded-xl border border-[#F2BA1D] text-[#F2BA1D] hover:bg-[#fff7e0] text-sm font-semibold w-1/2 transition">
+              Add now
+            </button>
           </div>
-        );
-      })}
+        </div>
+      ))}
     </section>
   );
 }
