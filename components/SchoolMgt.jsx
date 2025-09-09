@@ -80,8 +80,8 @@ export default function SchoolMgt() {
           </thead>
           <tbody>
             <tr className="text-sm text-gray-800 font-medium hover:bg-gray-50">
-              <td className="p-3 ">1</td>
-              <td className="p-3 ">Accounting</td>
+              <td className="p-5">1</td>
+              <td className="p-3">Accounting</td>
               <td className="p-3">September 1, 2025</td>
               <td className="p-3">October 1, 2025</td>
               <td>
@@ -94,7 +94,7 @@ export default function SchoolMgt() {
 
             {/* Second table entry */}
             <tr className="text-sm text-gray-800 font-medium hover:bg-gray-50">
-              <td className="p-3 ">2</td>
+              <td className="p-5">2</td>
               <td className="p-3 ">Inventory</td>
               <td className="p-3">January 20, 2024</td>
               <td className="p-3">April 5, 2024</td>
@@ -108,8 +108,22 @@ export default function SchoolMgt() {
 
             {/* Third entry */}
             <tr className="text-sm text-gray-800 font-medium hover:bg-gray-50">
-              <td className="p-3 ">3</td>
+              <td className="p-5">3</td>
               <td className="p-3 ">Examination</td>
+              <td className="p-3">June 26, 2024</td>
+              <td className="p-3">August 8, 2024</td>
+              <td>
+                <div className="flex items-center justify-start p-3 space-x-3">
+                  <Trash className="fill-yellow-500 h-5 w-5 cursor-pointer" />
+                  <Edit className="fill-yellow-500 h-5 w-5 cursor-pointer" />
+                </div>
+              </td>
+            </tr>
+
+            {/* Fourth entry */}
+            <tr className="text-sm text-gray-800 font-medium hover:bg-gray-50">
+              <td className="p-5">4</td>
+              <td className="p-3">School Fees</td>
               <td className="p-3">June 26, 2024</td>
               <td className="p-3">August 8, 2024</td>
               <td>
