@@ -12,6 +12,7 @@ import Login from "../components/Login";
 import Dashboard from "../pages/Dashboard";
 import SuperAdmin from "../components/SuperAdmin";
 import SchoolMgt from "../components/SchoolMgt";
+import Academics from "../components/Academics";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />}>
           <Route path="super-admin" element={<SuperAdmin />} />
           <Route path="school-mgt" element={<SchoolMgt />} />
+          <Route path="academics" element={<Academics />} />
         </Route>
       </Route>
     </Routes>
