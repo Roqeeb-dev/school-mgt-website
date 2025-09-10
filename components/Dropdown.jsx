@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import { Book } from "lucide-react";
-import { academicData } from "./academicData";
 
 export default function Dropdown({ array }) {
   return (

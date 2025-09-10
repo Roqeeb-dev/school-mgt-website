@@ -48,7 +48,7 @@ export default function Sidebar() {
       </NavLink>
 
       {/* My School link */}
-      <NavLink to="/my-school" className={navLinkClasses}>
+      <NavLink to="/dashboard/my-school" className={navLinkClasses}>
         <Database className="h-4 w-4" />
         My School
       </NavLink>

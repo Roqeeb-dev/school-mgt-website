@@ -1,3 +1,12 @@
+import {
+  MessageSquareTextIcon,
+  Users,
+  LucideFilePenLine,
+  FileText,
+  Check,
+  X,
+} from "lucide-react";
+
 export const academicData = [
   { label: "Dashboard", to: "" },
   { label: "Class", to: "" },
@@ -18,4 +27,13 @@ export const schoolmgtData = [
   { label: "Add Branch", to: "" },
   { label: "Class", to: "" },
   { label: "Sessions", to: "" },
+];
+
+export const schoolBoxes = [
+  { icon: MessageSquareTextIcon, label: "Inquiry" },
+  { icon: Users, label: "Interested" },
+  { icon: Check, label: "Confirmation" },
+  { icon: X, label: "Rejected" },
+  { icon: FileText, label: "Shortlisted" },
+  { icon: LucideFilePenLine, label: "Admission" },
 ];

@@ -13,6 +13,7 @@ import Dashboard from "../pages/Dashboard";
 import SuperAdmin from "../components/SuperAdmin";
 import SchoolMgt from "../components/SchoolMgt";
 import Academics from "../components/Academics";
+import MySchool from "../components/MySchool";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="login" element={<Login />} />
         </Route>
         <Route path="/dashboard" element={<Dashboard />}>
+          <Route path="my-school" element={<MySchool />} />
           <Route path="super-admin" element={<SuperAdmin />} />
           <Route path="school-mgt" element={<SchoolMgt />} />
           <Route path="academics" element={<Academics />} />
