@@ -15,6 +15,7 @@ import SchoolMgt from "../components/SchoolMgt";
 import SchoolMgtDashboard from "../components/SchoolMgtDashboard";
 import Academics from "../components/Academics";
 import MySchool from "../components/MySchool";
+import MySchoolInquiries from "../components/MySchoolInquiries";
 import AddBranch from "../components/AddBranch";
 
 function App() {
@@ -33,7 +34,9 @@ function App() {
           <Route path="login" element={<Login />} />
         </Route>
         <Route path="/dashboard" element={<Dashboard />}>
-          <Route path="my-school" element={<MySchool />} />
+          <Route path="my-school" element={<MySchool />}>
+            <Route index element={<MySchoolInquiries />} />
+          </Route>
           <Route path="super-admin" element={<SuperAdmin />} />
           <Route path="school-mgt" element={<SchoolMgt />}>
             <Route index element={<SchoolMgtDashboard />} />

@@ -8,18 +8,18 @@ import {
 } from "lucide-react";
 
 export const academicData = [
-  { label: "Dashboard", to: "" },
-  { label: "Class", to: "" },
-  { label: "Sections", to: "" },
-  { label: "Subjects", to: "" },
-  { label: "Timetable", to: "" },
-  { label: "Attendance", to: "" },
-  { label: "Student Leaves", to: "" },
-  { label: "Study Materials", to: "" },
-  { label: "Homework", to: "" },
-  { label: "Notice Board", to: "" },
-  { label: "Events", to: "" },
-  { label: "Live Classes (Go pro)", to: "" },
+  { label: "Dashboard", to: "/dashboard/academics" },
+  { label: "Class", to: "/dashboard/academics/class" },
+  { label: "Sections", to: "/dashboard/academics/sections" },
+  { label: "Subjects", to: "/dashboard/academics/subjects" },
+  { label: "Timetable", to: "/dashboard/academics/timetable" },
+  { label: "Attendance", to: "/dashboard/academics/attendance" },
+  { label: "Student Leaves", to: "/dashboard/academics/student-leaves" },
+  { label: "Study Materials", to: "/dashboard/academics/study-materials" },
+  { label: "Homework", to: "/dashboard/academics/homework" },
+  { label: "Notice Board", to: "/dashboard/academics/notice-board" },
+  { label: "Events", to: "/dashboard/academics/events" },
+  { label: "Live Classes (Go pro)", to: "/dashboard/academics/live-classes" },
 ];
 
 export const schoolmgtData = [
@@ -39,6 +39,6 @@ export const schoolBoxes = [
 ];
 
 export const MySchoolData = [
-  { label: "Dashboard", to: "" },
-  { label: "Inquiries", to: "" },
+  { label: "Dashboard", to: "/dashboard/my-school" },
+  { label: "Inquiries", to: "/dashboard/my-school/inquiries" },
 ];
