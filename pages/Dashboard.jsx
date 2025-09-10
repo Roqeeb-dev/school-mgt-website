@@ -8,7 +8,7 @@ export default function Dashboard() {
     <main className="flex flex-col">
       <Navbar />
       <div className="flex h-screen">
-        <Sidebar />
+        <SecondSidebar />
         <MainContent />
       </div>
     </main>

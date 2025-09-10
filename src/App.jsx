@@ -18,6 +18,7 @@ import MySchool from "../components/MySchool";
 import MySchoolDashboard from "../components/MySchoolDashboard";
 import MySchoolInquiries from "../components/MySchoolInquiries";
 import AddBranch from "../components/AddBranch";
+import Billing from "../components/Billing";
 import SecondSidebar from "../components/Sidebar-2";
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
             <Route path="add-branch" element={<AddBranch />} />
           </Route>
           <Route path="academics" element={<Academics />} />
+          <Route path="billing" element={<Billing />} />
         </Route>
       </Route>
     </Routes>

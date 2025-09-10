@@ -1,55 +1,54 @@
 import { Check, X, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-export default function PricingCards() {
-  // Plans data
-  const plans = [
-    {
-      name: "Free",
-      oldPrice: "$20",
-      price: "$0",
-      features: [
-        { text: "View School Structure", available: true },
-        { text: "Approve Leaves", available: true },
-        { text: "Be up to date with activities", available: true },
-        { text: "Have unlimited access", available: false },
-      ],
-    },
-    {
-      name: "Basic",
-      oldPrice: "$50",
-      price: "$30",
-      features: [
-        { text: "View School Structure", available: true },
-        { text: "Approve Leaves", available: true },
-        { text: "Be up to date with activities", available: true },
-        { text: "Have unlimited access", available: true },
-      ],
-    },
-    {
-      name: "Standard",
-      oldPrice: "$80",
-      price: "$50",
-      features: [
-        { text: "Everything in Basic", available: true },
-        { text: "Generate Reports", available: true },
-        { text: "Advanced Analytics", available: true },
-        { text: "Priority Support", available: true },
-      ],
-    },
-    {
-      name: "Premium",
-      oldPrice: "$120",
-      price: "$90",
-      features: [
-        { text: "All Standard features", available: true },
-        { text: "Dedicated Account Manager", available: true },
-        { text: "Custom Integrations", available: true },
-        { text: "Unlimited Storage", available: true },
-      ],
-    },
-  ];
+export const plans = [
+  {
+    name: "Free",
+    oldPrice: "$20",
+    price: "$0",
+    features: [
+      { text: "View School Structure", available: true },
+      { text: "Approve Leaves", available: true },
+      { text: "Be up to date with activities", available: true },
+      { text: "Have unlimited access", available: false },
+    ],
+  },
+  {
+    name: "Basic",
+    oldPrice: "$50",
+    price: "$30",
+    features: [
+      { text: "View School Structure", available: true },
+      { text: "Approve Leaves", available: true },
+      { text: "Be up to date with activities", available: true },
+      { text: "Have unlimited access", available: true },
+    ],
+  },
+  {
+    name: "Standard",
+    oldPrice: "$80",
+    price: "$50",
+    features: [
+      { text: "Everything in Basic", available: true },
+      { text: "Generate Reports", available: true },
+      { text: "Advanced Analytics", available: true },
+      { text: "Priority Support", available: true },
+    ],
+  },
+  {
+    name: "Premium",
+    oldPrice: "$120",
+    price: "$90",
+    features: [
+      { text: "All Standard features", available: true },
+      { text: "Dedicated Account Manager", available: true },
+      { text: "Custom Integrations", available: true },
+      { text: "Unlimited Storage", available: true },
+    ],
+  },
+];
 
+export default function PricingCards() {
   return (
     <>
       {/* Plans timeline switcher buttons */}

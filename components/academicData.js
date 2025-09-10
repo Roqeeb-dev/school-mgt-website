@@ -68,7 +68,7 @@ export const sideLinksData = [
   { to: "/supports", icon: LifeBuoy, label: "Supports" },
   { to: "/organization", icon: Building2, label: "Organization" },
   { to: "/settings", icon: Settings, label: "Settings" },
-  { to: "/billing", icon: CreditCard, label: "Billing" },
+  { to: "/dashboard/billing", icon: CreditCard, label: "Billing" },
   { to: "/profiles", icon: User, label: "Profiles" },
   {
     to: "/organization-profile",
