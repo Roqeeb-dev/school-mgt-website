@@ -6,11 +6,11 @@ export default function MySchool() {
       <div className="flex flex-col">
         <p className="text-lg font-medium my-3">All User Inquiries</p>
         {/* Input fields */}
-        <div className="flex items-center gap-4 text-xs mb-5">
+        <div className="flex items-center gap-4 text-xs mb-10">
           <select
             name="session"
             id="session"
-            className="border border-gray-400 px-2 py-1  w-[200px] rounded-md"
+            className="border border-gray-400 p-2 w-[200px] rounded-md"
           >
             <option value="">Filter by date</option>
             <option value="">2022 - 2023</option>
@@ -22,7 +22,7 @@ export default function MySchool() {
             name="student-name"
             id="student-name"
             placeholder="Student Name"
-            className="focus:outline-none border border-gray-400 px-2 py-1 w-[200px] rounded-md  "
+            className="focus:outline-none border border-gray-400 p-2 w-[200px] rounded-md  "
           />
 
           <input
@@ -30,13 +30,13 @@ export default function MySchool() {
             name="search"
             id="search"
             placeholder="Search by enquiry"
-            className="focus:outline-none border border-gray-400 px-2 py-1 w-[200px] rounded-md  "
+            className="focus:outline-none border border-gray-400 p-2 w-[200px] rounded-md  "
           />
 
           <select
             name="session"
             id="session"
-            className="border border-gray-400 px-2 py-1  w-[200px] rounded-md"
+            className="border border-gray-400 p-2 w-[200px] rounded-md"
           >
             <option value="">Filter</option>
             <option value="">2022 - 2023</option>
@@ -51,7 +51,7 @@ export default function MySchool() {
             return (
               <div
                 key={index}
-                className="bg-gray-100 flex flex-col items-center justify-center gap-3 rounded-2xl shadow-lg p-6 hover:shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer"
+                className="bg-gray-100 flex flex-col items-center justify-center gap-3 rounded-2xl shadow-lg p-6 hover:bg-yellow-100 transition-transform duration-300 cursor-pointer"
               >
                 <div className="bg-yellow-500 rounded-full p-5 flex items-center justify-center">
                   <Icon className="w-10 h-10 text-white" />

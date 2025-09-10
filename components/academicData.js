@@ -23,10 +23,10 @@ export const academicData = [
 ];
 
 export const schoolmgtData = [
-  { label: "Dashboard", to: "" },
-  { label: "Add Branch", to: "" },
-  { label: "Class", to: "" },
-  { label: "Sessions", to: "" },
+  { label: "Dashboard", to: "/dashboard/school-mgt" },
+  { label: "Add Branch", to: "/dashboard/school-mgt/add-branch" },
+  { label: "Class", to: "/dashboard/school-mgt/class" },
+  { label: "Sessions", to: "/dashboard/school-mgt/sessions" },
 ];
 
 export const schoolBoxes = [
@@ -36,4 +36,9 @@ export const schoolBoxes = [
   { icon: X, label: "Rejected" },
   { icon: FileText, label: "Shortlisted" },
   { icon: LucideFilePenLine, label: "Admission" },
+];
+
+export const MySchoolData = [
+  { label: "Dashboard", to: "" },
+  { label: "Inquiries", to: "" },
 ];

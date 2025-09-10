@@ -12,8 +12,10 @@ import Login from "../components/Login";
 import Dashboard from "../pages/Dashboard";
 import SuperAdmin from "../components/SuperAdmin";
 import SchoolMgt from "../components/SchoolMgt";
+import SchoolMgtDashboard from "../components/SchoolMgtDashboard";
 import Academics from "../components/Academics";
 import MySchool from "../components/MySchool";
+import AddBranch from "../components/AddBranch";
 
 function App() {
   return (
@@ -33,7 +35,10 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />}>
           <Route path="my-school" element={<MySchool />} />
           <Route path="super-admin" element={<SuperAdmin />} />
-          <Route path="school-mgt" element={<SchoolMgt />} />
+          <Route path="school-mgt" element={<SchoolMgt />}>
+            <Route index element={<SchoolMgtDashboard />} />
+            <Route path="add-branch" element={<AddBranch />} />
+          </Route>
           <Route path="academics" element={<Academics />} />
         </Route>
       </Route>

@@ -1,7 +1,7 @@
 import { MenuIcon, Eye, Database, PenLine } from "lucide-react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import Dropdown from "./Dropdown";
-import { academicData, schoolmgtData } from "./academicData";
+import { academicData, schoolmgtData, MySchoolData } from "./academicData";
 import { useState } from "react";
 
 // Reusable styling function
@@ -16,16 +16,22 @@ export default function Sidebar() {
   const location = useLocation();
   const [showDropdown, setShowDropdown] = useState(false);
   const [showSchoolDropdown, setShowSchoolDropdown] = useState(false);
+  const [showMySchoolDropdown, setShowMySchoolDropdown] = useState(false);
   const navigate = useNavigate();
 
-  function handleClick(e) {
+  function handleClick() {
     setShowDropdown((prev) => !prev);
     navigate("/dashboard/academics");
   }
 
-  function handleSchoolClick(e) {
+  function handleSchoolClick() {
     setShowSchoolDropdown((prev) => !prev);
     navigate("/dashboard/school-mgt");
+  }
+
+  function handleMySchoolClick() {
+    setShowMySchoolDropdown((prev) => !prev);
+    navigate("/dashboard/my-school");
   }
 
   return (
@@ -48,10 +54,16 @@ export default function Sidebar() {
       </NavLink>
 
       {/* My School link */}
-      <NavLink to="/dashboard/my-school" className={navLinkClasses}>
+      <NavLink
+        to="/dashboard/my-school"
+        className={navLinkClasses}
+        onClick={handleMySchoolClick}
+      >
         <Database className="h-4 w-4" />
         My School
       </NavLink>
+
+      {showMySchoolDropdown && <Dropdown array={MySchoolData} />}
 
       {/* School Management with dropdown */}
       <NavLink
