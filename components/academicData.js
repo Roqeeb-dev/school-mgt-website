@@ -86,3 +86,39 @@ export const mySchoolDashboardData = [
   { icon: Settings, label: "Settings" },
   { icon: IdCard, label: "Card" },
 ];
+
+export const billingPlans = [
+  {
+    name: "Basic Pro",
+    oldPrice: "$50",
+    price: "$30",
+    features: [
+      { text: "View School Structure", available: true },
+      { text: "Approve Leaves", available: true },
+      { text: "Be up to date with activities", available: true },
+      { text: "Have unlimited access", available: true },
+    ],
+  },
+  {
+    name: "Professional",
+    oldPrice: "$80",
+    price: "$50",
+    features: [
+      { text: "Everything in Basic", available: true },
+      { text: "Generate Reports", available: true },
+      { text: "Advanced Analytics", available: true },
+      { text: "Priority Support", available: true },
+    ],
+  },
+  {
+    name: "Premier",
+    oldPrice: "$120",
+    price: "$90",
+    features: [
+      { text: "All Standard features", available: true },
+      { text: "Dedicated Account Manager", available: true },
+      { text: "Custom Integrations", available: true },
+      { text: "Unlimited Storage", available: true },
+    ],
+  },
+];
