@@ -1,4 +1,4 @@
-export default [
+export const academicData = [
   { label: "Dashboard", to: "" },
   { label: "Class", to: "" },
   { label: "Sections", to: "" },
@@ -11,4 +11,11 @@ export default [
   { label: "Notice Board", to: "" },
   { label: "Events", to: "" },
   { label: "Live Classes (Go pro)", to: "" },
+];
+
+export const schoolmgtData = [
+  { label: "Dashboard", to: "" },
+  { label: "Add Branch", to: "" },
+  { label: "Class", to: "" },
+  { label: "Sessions", to: "" },
 ];

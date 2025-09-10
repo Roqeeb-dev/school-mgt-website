@@ -1,6 +1,7 @@
 import { MenuIcon, Eye, Database, PenLine } from "lucide-react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import Dropdown from "./Dropdown";
+import { academicData, schoolmgtData } from "./academicData";
 import { useState } from "react";
 
 // Reusable styling function
@@ -14,6 +15,7 @@ const navLinkClasses = ({ isActive }) =>
 export default function Sidebar() {
   const location = useLocation();
   const [showDropdown, setShowDropdown] = useState(false);
+  const [showSchoolDropdown, setShowSchoolDropdown] = useState(false);
   const navigate = useNavigate();
 
   function handleClick(e) {
@@ -21,8 +23,13 @@ export default function Sidebar() {
     navigate("/dashboard/academics");
   }
 
+  function handleSchoolClick(e) {
+    setShowSchoolDropdown((prev) => !prev);
+    navigate("/dashboard/school-mgt");
+  }
+
   return (
-    <aside className="w-60 flex-none overflow-y-auto bg-[#08183A] px-3 py-4 flex flex-col gap-5 text-white">
+    <aside className="w-60 flex-none overflow-y-auto bg-[#08183A] px-3 py-4 flex flex-col gap-3 text-white">
       {/* User section */}
       <div className="flex items-center justify-between space-x-2">
         <NavLink
@@ -46,11 +53,17 @@ export default function Sidebar() {
         My School
       </NavLink>
 
-      {/* School Management (no dropdown) */}
-      <NavLink to="/dashboard/school-mgt" className={navLinkClasses}>
+      {/* School Management with dropdown */}
+      <NavLink
+        to="/dashboard/school-mgt"
+        className={navLinkClasses}
+        onClick={handleSchoolClick}
+      >
         <PenLine className="h-4 w-4" />
         School Management
       </NavLink>
+
+      {showSchoolDropdown && <Dropdown array={schoolmgtData} />}
 
       {/* Academics with dropdown */}
       <div>
@@ -63,7 +76,7 @@ export default function Sidebar() {
           Academics
         </NavLink>
 
-        {showDropdown && <Dropdown />}
+        {showDropdown && <Dropdown array={academicData} />}
       </div>
     </aside>
   );

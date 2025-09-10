@@ -1,5 +1,5 @@
 import { Plus } from "lucide-react";
-import academicData from "./academicData";
+import { academicData } from "./academicData";
 
 export default function Academics() {
   return (
