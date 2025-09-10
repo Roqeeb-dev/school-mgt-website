@@ -18,6 +18,18 @@ import {
   GraduationCap,
   UserCheck,
   BookOpen,
+  Laptop,
+  Wallet,
+  CalendarDays,
+  NotebookPen,
+  Clock,
+  MessagesSquare,
+  Target,
+  BedDouble,
+  Ticket,
+  BarChart3,
+  PhoneCall,
+  FilePlus2,
 } from "lucide-react";
 
 export const academicData = [
@@ -121,4 +133,23 @@ export const billingPlans = [
       { text: "Unlimited Storage", available: true },
     ],
   },
+];
+
+export const instituteServices = [
+  { icon: Building2, label: "Institute Management" },
+  { icon: FilePlus2, label: "Online Admission" },
+  { icon: Users, label: "Finance Management" },
+  { icon: Wallet, label: "Fees Management" },
+  { icon: FileText, label: "Result Management" },
+  { icon: CalendarDays, label: "HR Management" },
+  { icon: NotebookPen, label: "Lesson Planning" },
+  { icon: Clock, label: "Time-table Module" },
+  { icon: MessagesSquare, label: "Inquiry Management" },
+  { icon: BookOpen, label: "Library Management" },
+  { icon: Laptop, label: "Complaint / Grievance" },
+  { icon: Target, label: "Target Management with Rating" },
+  { icon: BedDouble, label: "Hostel Management" },
+  { icon: Ticket, label: "Gate Pass Management" },
+  { icon: BarChart3, label: "Analysis and Reports" },
+  { icon: PhoneCall, label: "Auto Voice Calls" },
 ];
