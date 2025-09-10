@@ -14,6 +14,10 @@ import {
   CreditCard,
   User,
   Briefcase,
+  IdCard,
+  GraduationCap,
+  UserCheck,
+  BookOpen,
 } from "lucide-react";
 
 export const academicData = [
@@ -71,4 +75,14 @@ export const sideLinksData = [
     icon: Briefcase,
     label: "Organization Profile",
   },
+];
+
+export const mySchoolDashboardData = [
+  { icon: GraduationCap, label: "Students" },
+  { icon: Users, label: "Teachers" },
+  { icon: UserCheck, label: "Parents" },
+  { icon: BookOpen, label: "Academics" },
+  { icon: FileText, label: "Class" },
+  { icon: Settings, label: "Settings" },
+  { icon: IdCard, label: "Card" },
 ];
