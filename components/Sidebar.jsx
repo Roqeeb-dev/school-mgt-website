@@ -5,7 +5,7 @@ import { academicData, schoolmgtData, MySchoolData } from "./academicData";
 import { useState } from "react";
 
 // Reusable styling function
-const navLinkClasses = ({ isActive }) =>
+export const navLinkClasses = ({ isActive }) =>
   `flex items-center gap-2 p-2 rounded-md text-sm font-semibold transition ${
     isActive
       ? "bg-[#F2BA1D] text-black"

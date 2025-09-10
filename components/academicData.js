@@ -5,6 +5,15 @@ import {
   FileText,
   Check,
   X,
+  Eye,
+  Database,
+  LayoutDashboard,
+  LifeBuoy,
+  Building2,
+  Settings,
+  CreditCard,
+  User,
+  Briefcase,
 } from "lucide-react";
 
 export const academicData = [
@@ -41,4 +50,25 @@ export const schoolBoxes = [
 export const MySchoolData = [
   { label: "Dashboard", to: "/dashboard/my-school" },
   { label: "Inquiries", to: "/dashboard/my-school/inquiries" },
+];
+
+export const sideLinksData = [
+  { to: "/dashboard", icon: Eye, label: "Dashboard" },
+  { to: "/my-school", icon: Database, label: "My School" },
+  {
+    to: "/management-dashboard",
+    icon: LayoutDashboard,
+    label: "Management Dashboard",
+  },
+  { to: "/users-management", icon: Users, label: "Users Management" },
+  { to: "/supports", icon: LifeBuoy, label: "Supports" },
+  { to: "/organization", icon: Building2, label: "Organization" },
+  { to: "/settings", icon: Settings, label: "Settings" },
+  { to: "/billing", icon: CreditCard, label: "Billing" },
+  { to: "/profiles", icon: User, label: "Profiles" },
+  {
+    to: "/organization-profile",
+    icon: Briefcase,
+    label: "Organization Profile",
+  },
 ];

@@ -17,6 +17,7 @@ import Academics from "../components/Academics";
 import MySchool from "../components/MySchool";
 import MySchoolInquiries from "../components/MySchoolInquiries";
 import AddBranch from "../components/AddBranch";
+import SecondSidebar from "../components/Sidebar-2";
 
 function App() {
   return (
