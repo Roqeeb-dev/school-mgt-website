@@ -48,7 +48,7 @@ export default function Sidebar() {
       </div>
 
       {/* Super Admin link */}
-      <NavLink to="/dashboard/super-admin" className={navLinkClasses}>
+      <NavLink to="/dashboard/comingsoon" className={navLinkClasses}>
         <Eye className="h-4 w-4" />
         Go to Super Admin
       </NavLink>

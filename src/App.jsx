@@ -20,6 +20,7 @@ import MySchoolInquiries from "../components/MySchoolInquiries";
 import AddBranch from "../components/AddBranch";
 import Billing from "../components/Billing";
 import Addon from "../components/Addon";
+import ComingSoon from "../components/ComingSoonPage";
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
           <Route path="academics" element={<Academics />} />
           <Route path="billing" element={<Billing />} />
           <Route path="addon" element={<Addon />} />
+          <Route path="comingsoon" element={<ComingSoon />} />
         </Route>
       </Route>
     </Routes>
