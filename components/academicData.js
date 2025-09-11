@@ -153,3 +153,11 @@ export const instituteServices = [
   { icon: BarChart3, label: "Analysis and Reports" },
   { icon: PhoneCall, label: "Auto Voice Calls" },
 ];
+
+export const integrationServices = [
+  { icon: Building2, label: "Smart Attendance Managment System" },
+  { icon: FilePlus2, label: "GPS bus tracking" },
+  { icon: Users, label: "Online fee payment" },
+  { icon: Wallet, label: "SMS Gateway" },
+  { icon: FileText, label: "Profile scan via QR code" },
+];
