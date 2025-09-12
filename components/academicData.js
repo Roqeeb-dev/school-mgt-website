@@ -34,17 +34,40 @@ import {
 
 export const academicData = [
   { label: "Dashboard", to: "/dashboard/academics" },
-  { label: "Class", to: "/dashboard/academics/class" },
-  { label: "Sections", to: "/dashboard/academics/sections" },
-  { label: "Subjects", to: "/dashboard/academics/subjects" },
-  { label: "Timetable", to: "/dashboard/academics/timetable" },
-  { label: "Attendance", to: "/dashboard/academics/attendance" },
-  { label: "Student Leaves", to: "/dashboard/academics/student-leaves" },
-  { label: "Study Materials", to: "/dashboard/academics/study-materials" },
-  { label: "Homework", to: "/dashboard/academics/homework" },
-  { label: "Notice Board", to: "/dashboard/academics/notice-board" },
-  { label: "Events", to: "/dashboard/academics/events" },
-  { label: "Live Classes (Go pro)", to: "/dashboard/academics/live-classes" },
+  { label: "Class", to: "/dashboard/academics/class", comingSoon: true },
+  { label: "Sections", to: "/dashboard/academics/sections", comingSoon: true },
+  { label: "Subjects", to: "/dashboard/academics/subjects", comingSoon: true },
+  {
+    label: "Timetable",
+    to: "/dashboard/academics/timetable",
+    comingSoon: true,
+  },
+  {
+    label: "Attendance",
+    to: "/dashboard/academics/attendance",
+    comingSoon: true,
+  },
+  {
+    label: "Student Leaves",
+    to: "/dashboard/academics/student-leaves",
+  },
+  {
+    label: "Study Materials",
+    to: "/dashboard/academics/study-materials",
+    comingSoon: true,
+  },
+  { label: "Homework", to: "/dashboard/academics/homework", comingSoon: true },
+  {
+    label: "Notice Board",
+    to: "/dashboard/academics/notice-board",
+    comingSoon: true,
+  },
+  { label: "Events", to: "/dashboard/academics/events", comingSoon: true },
+  {
+    label: "Live Classes (Go pro)",
+    to: "/dashboard/academics/live-classes",
+    comingSoon: true,
+  },
 ];
 
 export const schoolmgtData = [
