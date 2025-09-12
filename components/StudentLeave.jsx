@@ -1,7 +1,20 @@
 import { Eye, FileEdit, Plus } from "lucide-react";
-import { leaves } from "./academicData";
+import { leaves as initialLeaves } from "./academicData"; // keep original data
+import { useState } from "react";
+import AddLeaveModal from "./AddLeaveModal";
 
 export default function StudentLeaves() {
+  const [openModal, setOpenModal] = useState(false);
+  const [leaveData, setLeaveData] = useState(initialLeaves); // state to store leaves
+
+  // function to handle adding a new leave
+  const handleAddLeave = (newLeave) => {
+    setLeaveData((prev) => [
+      ...prev,
+      { id: prev.length + 1, ...newLeave }, // auto-generate id
+    ]);
+  };
+
   return (
     <div className="p-5 bg-white rounded-lg shadow">
       {/* Header */}
@@ -23,10 +36,20 @@ export default function StudentLeaves() {
           />
         </div>
 
-        <button className="flex items-center gap-2 border-2 border-yellow-600 uppercase text-black hover:bg-yellow-100 px-4 py-2 rounded-full text-sm font-medium">
+        <button
+          onClick={() => setOpenModal(true)}
+          className="flex items-center gap-2 border-2 border-yellow-600 uppercase text-black hover:bg-yellow-100 px-4 py-2 rounded-full text-sm font-medium"
+        >
           <Plus className="h-4 w-4" /> Add New Leave
         </button>
       </div>
+
+      {/* Modal */}
+      <AddLeaveModal
+        isOpen={openModal}
+        onClose={() => setOpenModal(false)}
+        onAddLeave={handleAddLeave} // pass handler
+      />
 
       {/* Table */}
       <div className="overflow-x-auto">
@@ -44,7 +67,7 @@ export default function StudentLeaves() {
             </tr>
           </thead>
           <tbody>
-            {leaves.map((leave) => (
+            {leaveData.map((leave) => (
               <tr key={leave.id} className="hover:bg-gray-50">
                 <td className="p-6">{leave.enrolment}</td>
                 <td className="p-6">{leave.name}</td>
