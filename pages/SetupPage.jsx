@@ -73,7 +73,7 @@ export default function SetupPage() {
       {/* Navigation buttons */}
       <div className="flex flex-col sm:flex-row items-center justify-end gap-3 text-sm font-semibold w-full sm:w-auto">
         <Link
-          to=""
+          to="/auth/login"
           className="flex items-center justify-center gap-2 p-2 border-2 border-[#F2BA1D] text-[#F2BA1D] uppercase rounded-xl w-full sm:w-[200px] transition-all duration-300 ease-in-out hover:bg-[#d89d12] hover:text-white hover:shadow-lg hover:scale-105"
         >
           Skip <ArrowRight className="h-5 w-5" />
