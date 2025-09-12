@@ -14,6 +14,7 @@ import SuperAdmin from "../components/SuperAdmin";
 import SchoolMgt from "../components/SchoolMgt";
 import SchoolMgtDashboard from "../components/SchoolMgtDashboard";
 import Academics from "../components/Academics";
+import AcademicDashboard from "../components/AcademicDashboard";
 import MySchool from "../components/MySchool";
 import MySchoolDashboard from "../components/MySchoolDashboard";
 import MySchoolInquiries from "../components/MySchoolInquiries";
@@ -55,28 +56,25 @@ function App() {
             <Route path="add-branch" element={<AddBranch />} />
           </Route>
 
-          <Route path="academics" element={<Academics />} />
+          <Route path="academics" element={<Academics />}>
+            <Route index element={<AcademicDashboard />} />
+            <Route path="student-leaves" element={<StudentLeaves />} />
+          </Route>
 
           <Route path="billing" element={<Billing />} />
           <Route path="addon" element={<Addon />} />
           <Route path="comingsoon" element={<ComingSoon />} />
         </Route>
       </Route>
-      {academicData.map((item, index) => (
-        <Route
-          key={index}
-          path={item.to}
-          element={
-            item.comingSoon ? (
-              <ComingSoon message={`${item.label} Coming Soon`} />
-            ) : item.label === "Student Leaves" ? (
-              <StudentLeaves />
-            ) : (
-              <div>{item.label} Page</div>
-            )
-          }
-        />
-      ))}
+      {academicData
+        .filter((item) => item.comingSoon)
+        .map((item, index) => (
+          <Route
+            key={index}
+            path={item.to}
+            element={<ComingSoon message={`${item.label} Coming Soon`} />}
+          />
+        ))}
     </Routes>
   );
 }

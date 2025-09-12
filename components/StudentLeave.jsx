@@ -1,39 +1,7 @@
 import { Eye, FileEdit } from "lucide-react";
+import { leaves } from "./academicData";
 
 export default function StudentLeaves() {
-  const leaves = [
-    {
-      id: 1,
-      enrolment: "25143",
-      name: "Rajdeep Dutt",
-      class: "XII",
-      section: "C",
-      reason: "Fever",
-      leaveDate: "21/09 to 12/10",
-      status: "Active",
-    },
-    {
-      id: 2,
-      enrolment: "25144",
-      name: "Anita Kumar",
-      class: "XI",
-      section: "B",
-      reason: "Family Emergency",
-      leaveDate: "15/08 to 20/08",
-      status: "Active",
-    },
-    {
-      id: 3,
-      enrolment: "25145",
-      name: "Arjun Mehta",
-      class: "X",
-      section: "A",
-      reason: "Surgery",
-      leaveDate: "01/07 to 10/07",
-      status: "Inactive",
-    },
-  ];
-
   return (
     <div className="p-5 bg-white rounded-lg shadow">
       {/* Header */}
