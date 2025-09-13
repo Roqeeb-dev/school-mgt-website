@@ -26,7 +26,7 @@ export default function ProfileForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData); // Replace with API/localStorage
+    console.log(formData);
   };
 
   return (
@@ -39,7 +39,7 @@ export default function ProfileForm() {
         <img
           src="https://via.placeholder.com/100"
           alt="Profile"
-          className="w-24 h-24 rounded-full object-cover"
+          className="w-24 h-24 bg-gray-100 rounded-full object-cover"
         />
         <label className="flex flex-col text-sm font-medium">
           Upload Photo
@@ -57,41 +57,38 @@ export default function ProfileForm() {
       <div className="grid md:grid-cols-2 gap-6">
         {/* Left column */}
         <div className="flex flex-col gap-4">
-          <input
-            type="text"
-            name="studentName"
-            value={formData.studentName}
-            onChange={handleChange}
-            placeholder="Student Name"
-            className="border px-3 py-2 rounded-md w-full"
-          />
-          <input
-            type="text"
-            name="fatherName"
-            value={formData.fatherName}
-            onChange={handleChange}
-            placeholder="Father's Name"
-            className="border px-3 py-2 rounded-md w-full"
-          />
-          <input
-            type="text"
-            name="motherName"
-            value={formData.motherName}
-            onChange={handleChange}
-            placeholder="Mother's Name"
-            className="border px-3 py-2 rounded-md w-full"
-          />
-          <textarea
-            name="address"
-            value={formData.address}
-            onChange={handleChange}
-            placeholder="Address"
-            rows="2"
-            className="border px-3 py-2 rounded-md w-full"
-          />
+          {[
+            { label: "Student Name", name: "studentName", type: "text" },
+            { label: "Father's Name", name: "fatherName", type: "text" },
+            { label: "Mother's Name", name: "motherName", type: "text" },
+          ].map((field) => (
+            <div key={field.name} className="flex items-center gap-4">
+              <label className="w-32 text-sm font-medium">{field.label}</label>
+              <input
+                type={field.type}
+                name={field.name}
+                value={formData[field.name]}
+                onChange={handleChange}
+                className="flex-1 border px-3 py-2 rounded-md"
+              />
+            </div>
+          ))}
+
+          {/* Address */}
+          <div className="flex items-start gap-4">
+            <label className="w-32 text-sm font-medium mt-2">Address</label>
+            <textarea
+              name="address"
+              value={formData.address}
+              onChange={handleChange}
+              rows="2"
+              className="flex-1 border px-3 py-2 rounded-md"
+            />
+          </div>
+
           {/* Gender */}
-          <div>
-            <p className="text-sm font-medium mb-2">Gender</p>
+          <div className="flex items-center gap-4">
+            <label className="w-32 text-sm font-medium">Gender</label>
             <div className="flex gap-4">
               {["Male", "Female", "Others"].map((g) => (
                 <label key={g} className="flex items-center gap-2">
@@ -107,91 +104,58 @@ export default function ProfileForm() {
               ))}
             </div>
           </div>
-          <input
-            type="text"
-            name="pincode"
-            value={formData.pincode}
-            onChange={handleChange}
-            placeholder="Pincode"
-            className="border px-3 py-2 rounded-md w-full"
-          />
-          <select
-            name="state"
-            value={formData.state}
-            onChange={handleChange}
-            className="border px-3 py-2 rounded-md w-full"
-          >
-            <option value="">Select State</option>
-            <option value="State 1">State 1</option>
-            <option value="State 2">State 2</option>
-          </select>
+
+          {/* Pincode */}
+          <div className="flex items-center gap-4">
+            <label className="w-32 text-sm font-medium">Pincode</label>
+            <input
+              type="text"
+              name="pincode"
+              value={formData.pincode}
+              onChange={handleChange}
+              className="flex-1 border px-3 py-2 rounded-md"
+            />
+          </div>
+
+          {/* State */}
+          <div className="flex items-center gap-4">
+            <label className="w-32 text-sm font-medium">State</label>
+            <select
+              name="state"
+              value={formData.state}
+              onChange={handleChange}
+              className="flex-1 border px-3 py-2 rounded-md"
+            >
+              <option value="">Select State</option>
+              <option value="State 1">State 1</option>
+              <option value="State 2">State 2</option>
+            </select>
+          </div>
         </div>
 
         {/* Right column */}
         <div className="flex flex-col gap-4">
-          <input
-            type="text"
-            name="district"
-            value={formData.district}
-            onChange={handleChange}
-            placeholder="District"
-            className="border px-3 py-2 rounded-md w-full"
-          />
-          <input
-            type="tel"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            placeholder="Phone No."
-            className="border px-3 py-2 rounded-md w-full"
-          />
-          <input
-            type="text"
-            name="taxNumber"
-            value={formData.taxNumber}
-            onChange={handleChange}
-            placeholder="Tax Number"
-            className="border px-3 py-2 rounded-md w-full"
-          />
-          <input
-            type="text"
-            name="registrationNo"
-            value={formData.registrationNo}
-            onChange={handleChange}
-            placeholder="Registration No."
-            className="border px-3 py-2 rounded-md w-full"
-          />
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="Email"
-            className="border px-3 py-2 rounded-md w-full"
-          />
-          <input
-            type="date"
-            name="dob"
-            value={formData.dob}
-            onChange={handleChange}
-            className="border px-3 py-2 rounded-md w-full"
-          />
-          <input
-            type="text"
-            name="bloodGroup"
-            value={formData.bloodGroup}
-            onChange={handleChange}
-            placeholder="Blood Group"
-            className="border px-3 py-2 rounded-md w-full"
-          />
-          <input
-            type="text"
-            name="abilities"
-            value={formData.abilities}
-            onChange={handleChange}
-            placeholder="Any Abilities"
-            className="border px-3 py-2 rounded-md w-full"
-          />
+          {[
+            { label: "District", name: "district", type: "text" },
+            { label: "Phone No.", name: "phone", type: "tel" },
+            { label: "Tax Number", name: "taxNumber", type: "text" },
+            { label: "Registration No.", name: "registrationNo", type: "text" },
+            { label: "Email", name: "email", type: "email" },
+            { label: "Date of Birth", name: "dob", type: "date" },
+            { label: "Blood Group", name: "bloodGroup", type: "text" },
+            { label: "Any Abilities", name: "abilities", type: "text" },
+          ].map((field) => (
+            <div key={field.name} className="flex items-center gap-4">
+              <label className="w-32 text-sm font-medium">{field.label}</label>
+              <input
+                type={field.type}
+                name={field.name}
+                value={formData[field.name]}
+                onChange={handleChange}
+                className="flex-1 border px-3 py-2 rounded-md"
+              />
+            </div>
+          ))}
         </div>
       </div>
 
