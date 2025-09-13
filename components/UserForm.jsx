@@ -19,6 +19,7 @@ export default function UserForm() {
 
   return (
     <form
+      id="user-form"
       onSubmit={handleSubmit}
       className="my-15 grid grid-cols-1 md:grid-cols-2 gap-5 w-full max-w-3xl px-4"
     >
