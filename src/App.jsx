@@ -24,58 +24,61 @@ import Addon from "../components/Addon";
 import ComingSoon from "../components/ComingSoonPage";
 import StudentLeaves from "../components/StudentLeave";
 import { academicData } from "../components/academicData";
+import { UserProvider } from "../context/userContext";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<OnboardingPage />}>
-        <Route index element={<LandingPage />} />
+    <UserProvider>
+      <Routes>
+        <Route path="/" element={<OnboardingPage />}>
+          <Route index element={<LandingPage />} />
 
-        <Route path="/setup" element={<SetupPage />}>
-          <Route index element={<UserForm />} />
-          <Route path="pricing" element={<PricingCards />} />
-          <Route path="payment" element={<PaymentPage />} />
-          <Route path="finish" element={<Finished />} />
-        </Route>
-
-        <Route path="/auth" element={<AuthPage />}>
-          <Route path="register" element={<Register />} />
-          <Route path="login" element={<Login />} />
-        </Route>
-
-        <Route path="/dashboard" element={<Dashboard />}>
-          <Route path="super-admin" element={<SuperAdmin />} />
-
-          <Route path="my-school" element={<MySchool />}>
-            <Route index element={<MySchoolDashboard />} />
-            <Route path="inquiries" element={<MySchoolInquiries />} />
+          <Route path="/setup" element={<SetupPage />}>
+            <Route index element={<UserForm />} />
+            <Route path="pricing" element={<PricingCards />} />
+            <Route path="payment" element={<PaymentPage />} />
+            <Route path="finish" element={<Finished />} />
           </Route>
 
-          <Route path="school-mgt" element={<SchoolMgt />}>
-            <Route index element={<SchoolMgtDashboard />} />
-            <Route path="add-branch" element={<AddBranch />} />
+          <Route path="/auth" element={<AuthPage />}>
+            <Route path="register" element={<Register />} />
+            <Route path="login" element={<Login />} />
           </Route>
 
-          <Route path="academics" element={<Academics />}>
-            <Route index element={<AcademicDashboard />} />
-            <Route path="student-leaves" element={<StudentLeaves />} />
-          </Route>
+          <Route path="/dashboard" element={<Dashboard />}>
+            <Route path="super-admin" element={<SuperAdmin />} />
 
-          <Route path="billing" element={<Billing />} />
-          <Route path="addon" element={<Addon />} />
-          <Route path="comingsoon" element={<ComingSoon />} />
+            <Route path="my-school" element={<MySchool />}>
+              <Route index element={<MySchoolDashboard />} />
+              <Route path="inquiries" element={<MySchoolInquiries />} />
+            </Route>
+
+            <Route path="school-mgt" element={<SchoolMgt />}>
+              <Route index element={<SchoolMgtDashboard />} />
+              <Route path="add-branch" element={<AddBranch />} />
+            </Route>
+
+            <Route path="academics" element={<Academics />}>
+              <Route index element={<AcademicDashboard />} />
+              <Route path="student-leaves" element={<StudentLeaves />} />
+            </Route>
+
+            <Route path="billing" element={<Billing />} />
+            <Route path="addon" element={<Addon />} />
+            <Route path="comingsoon" element={<ComingSoon />} />
+          </Route>
         </Route>
-      </Route>
-      {academicData
-        .filter((item) => item.comingSoon)
-        .map((item, index) => (
-          <Route
-            key={index}
-            path={item.to}
-            element={<ComingSoon message={`${item.label} Coming Soon`} />}
-          />
-        ))}
-    </Routes>
+        {academicData
+          .filter((item) => item.comingSoon)
+          .map((item, index) => (
+            <Route
+              key={index}
+              path={item.to}
+              element={<ComingSoon message={`${item.label} Coming Soon`} />}
+            />
+          ))}
+      </Routes>
+    </UserProvider>
   );
 }
 

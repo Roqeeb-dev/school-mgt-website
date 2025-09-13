@@ -1,7 +1,8 @@
-import userContext from "../context/userContext";
-import { useContext, useState } from "react";
+import { useState } from "react";
+import { useUser } from "../context/userContext";
 
 export default function UserForm() {
+  const { setUser } = useUser();
   const [userData, setUserData] = useState({
     firstName: "",
     lastName: "",
@@ -10,8 +11,17 @@ export default function UserForm() {
     role: "",
     password: "",
   });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setUser(userData);
+  };
+
   return (
-    <form className="my-15 grid grid-cols-1 md:grid-cols-2 gap-5 w-full max-w-3xl px-4">
+    <form
+      onSubmit={handleSubmit}
+      className="my-15 grid grid-cols-1 md:grid-cols-2 gap-5 w-full max-w-3xl px-4"
+    >
       {/* First name */}
       <input
         type="text"
