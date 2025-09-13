@@ -1,8 +1,19 @@
 import { NavLink } from "react-router-dom";
 import { User2, Bell } from "lucide-react";
+import { useUser } from "../context/userContext";
 import logo from "../src/assets/school-logo.png";
 
 export default function Navbar() {
+  const { user } = useUser();
+  const storedData = JSON.parse(localStorage.getItem("userData") || "{}");
+
+  // Prefer context data, fallback to localStorage
+  const username =
+    user?.firstName && user?.lastName
+      ? `${user.firstName} ${user.lastName}`
+      : storedData?.firstName && storedData?.lastName
+      ? `${storedData.firstName} ${storedData.lastName}`
+      : "Guest";
   return (
     <header className="sticky top-0 bg-white p-3 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] flex items-center justify-between">
       {/* Logo */}
@@ -24,7 +35,7 @@ export default function Navbar() {
         <div className="flex items-center space-x-3">
           <div className="flex items-center space-x-2 cursor-pointer">
             <User2 className="h-9 w-9 p-2 rounded-full bg-gray-300" />
-            <p>User name</p>
+            <p>{username}</p>
           </div>
           <button>
             <Bell className="fill-black w-6 h-6" />

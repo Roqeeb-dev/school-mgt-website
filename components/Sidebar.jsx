@@ -1,8 +1,9 @@
 import { MenuIcon, Eye, Database, PenLine } from "lucide-react";
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Dropdown from "./Dropdown";
 import { academicData, schoolmgtData, MySchoolData } from "./academicData";
 import { useState } from "react";
+import { useUser } from "../context/userContext";
 
 // Reusable styling function
 export const navLinkClasses = ({ isActive }) =>
@@ -13,7 +14,17 @@ export const navLinkClasses = ({ isActive }) =>
   }`;
 
 export default function Sidebar() {
-  const location = useLocation();
+  const { user } = useUser();
+  const storedData = JSON.parse(localStorage.getItem("userData") || "{}");
+
+  // Prefer context data, fallback to localStorage
+  const username =
+    user?.firstName && user?.lastName
+      ? `${user.firstName} ${user.lastName}`
+      : storedData?.firstName && storedData?.lastName
+      ? `${storedData.firstName} ${storedData.lastName}`
+      : "Guest";
+
   const [showDropdown, setShowDropdown] = useState(false);
   const [showSchoolDropdown, setShowSchoolDropdown] = useState(false);
   const [showMySchoolDropdown, setShowMySchoolDropdown] = useState(false);
@@ -42,7 +53,7 @@ export default function Sidebar() {
           to="/profile"
           className="bg-[#F2BA1D] p-2 rounded-md flex-1 text-sm font-semibold text-black"
         >
-          Roqeeb Taiwo
+          {username}
         </NavLink>
         <MenuIcon className="text-white cursor-pointer ml-3" />
       </div>

@@ -46,7 +46,7 @@ function App() {
           </Route>
 
           <Route path="/dashboard" element={<Dashboard />}>
-            <Route path="super-admin" element={<SuperAdmin />} />
+            <Route index element={<SuperAdmin />} />
 
             <Route path="my-school" element={<MySchool />}>
               <Route index element={<MySchoolDashboard />} />
