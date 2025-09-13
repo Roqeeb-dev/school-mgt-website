@@ -25,7 +25,7 @@ export default function MySchoolDashboard() {
             );
           })}
         </div>
-        <div class="bg-[#F2BA1D] m-1 text-center text-black font-semibold p-1 shadow-md [clip-path:polygon(0_0,90%_0,100%_50%,90%_100%,0_100%)] [writing-mode:vertical-rl] rotate-180">
+        <div class="hidden md:flex justify-center bg-[#F2BA1D] m-1 text-center text-black font-semibold p-1 shadow-md [clip-path:polygon(0_0,90%_0,100%_50%,90%_100%,0_100%)] [writing-mode:vertical-rl] rotate-180">
           <NavLink to="/dashboard/addon">Addon Services</NavLink>
         </div>
       </article>

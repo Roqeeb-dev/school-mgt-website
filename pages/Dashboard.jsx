@@ -7,9 +7,12 @@ export default function Dashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <main className="flex flex-col">
+    <main className="flex flex-col h-screen">
+      {/* Navbar at top */}
       <Navbar onToggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
-      <div className="flex h-screen">
+
+      {/* Content area takes remaining height */}
+      <div className="flex flex-1 overflow-hidden">
         <Sidebar
           sidebarOpen={sidebarOpen}
           onCloseSidebar={() => setSidebarOpen(false)}

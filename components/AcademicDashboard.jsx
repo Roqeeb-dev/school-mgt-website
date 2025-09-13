@@ -17,7 +17,7 @@ export default function AcademicDashboard() {
             <button className="bg-[#F2BA1D] hover:bg-[#d89d12] text-white px-4 py-2 rounded-xl text-sm font-semibold w-1/2 transition">
               View
             </button>
-            <button className="flex items-center space-x-2 px-4 py-2 rounded-xl border border-[#F2BA1D] text-[#F2BA1D] hover:bg-[#fff7e0] text-sm font-semibold w-1/2 transition">
+            <button className="flex items-center space-x-2 px-4 py-2 rounded-xl border border-[#F2BA1D] text-[#F2BA1D] hover:bg-yellow-100 text-sm font-semibold w-1/2 transition">
               <Plus className="h-5 w-5" />
               Add New
             </button>

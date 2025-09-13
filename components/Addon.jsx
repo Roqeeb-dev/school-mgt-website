@@ -23,7 +23,7 @@ export default function Addon() {
       </div>
 
       {/* Add on services boxes */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 my-5">
         {instituteServices.map((service, idx) => {
           const Icon = service.icon;
           return (
