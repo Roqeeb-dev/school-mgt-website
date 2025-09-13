@@ -104,7 +104,7 @@ export const sideLinksData = [
   { to: "/organization", icon: Building2, label: "Organization" },
   { to: "/settings", icon: Settings, label: "Settings" },
   { to: "/dashboard/billing", icon: CreditCard, label: "Billing" },
-  { to: "/profiles", icon: User, label: "Profiles" },
+  { to: "/dashboard/profile", icon: User, label: "Profiles" },
   {
     to: "/organization-profile",
     icon: Briefcase,

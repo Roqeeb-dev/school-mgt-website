@@ -25,6 +25,7 @@ import ComingSoon from "../components/ComingSoonPage";
 import StudentLeaves from "../components/StudentLeave";
 import { academicData } from "../components/academicData";
 import { UserProvider } from "../context/userContext";
+import ProfileForm from "../components/ProfileForm";
 
 function App() {
   return (
@@ -65,6 +66,7 @@ function App() {
 
             <Route path="billing" element={<Billing />} />
             <Route path="addon" element={<Addon />} />
+            <Route path="profile" element={<ProfileForm />} />
             <Route path="comingsoon" element={<ComingSoon />} />
           </Route>
         </Route>
