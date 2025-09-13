@@ -69,7 +69,7 @@ export default function ProfileForm() {
                 name={field.name}
                 value={formData[field.name]}
                 onChange={handleChange}
-                className="flex-1 border px-3 py-2 rounded-md"
+                className="flex-1 border px-3 py-1 rounded-md"
               />
             </div>
           ))}
@@ -82,7 +82,7 @@ export default function ProfileForm() {
               value={formData.address}
               onChange={handleChange}
               rows="2"
-              className="flex-1 border px-3 py-2 rounded-md"
+              className="flex-1 border px-3 py-1 rounded-md"
             />
           </div>
 
@@ -113,7 +113,7 @@ export default function ProfileForm() {
               name="pincode"
               value={formData.pincode}
               onChange={handleChange}
-              className="flex-1 border px-3 py-2 rounded-md"
+              className="flex-1 border px-3 py-1 rounded-md"
             />
           </div>
 
@@ -124,7 +124,7 @@ export default function ProfileForm() {
               name="state"
               value={formData.state}
               onChange={handleChange}
-              className="flex-1 border px-3 py-2 rounded-md"
+              className="flex-1 border px-3 py-1 rounded-md"
             >
               <option value="">Select State</option>
               <option value="State 1">State 1</option>
@@ -152,7 +152,7 @@ export default function ProfileForm() {
                 name={field.name}
                 value={formData[field.name]}
                 onChange={handleChange}
-                className="flex-1 border px-3 py-2 rounded-md"
+                className="flex-1 border px-3 py-1 rounded-md"
               />
             </div>
           ))}
