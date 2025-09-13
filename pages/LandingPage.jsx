@@ -1,8 +1,10 @@
 import { ArrowRight } from "lucide-react";
 import logo from "../src/assets/school-logo.png";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export default function LandingPage() {
+  const [checked, setChecked] = useState(false);
   return (
     <main className="flex flex-col items-center justify-center gap-6 text-center h-screen px-4">
       {/* Logo */}
@@ -30,6 +32,9 @@ export default function LandingPage() {
           type="checkbox"
           name="accept"
           id="accept"
+          onChange={() => {
+            setChecked(!checked);
+          }}
           className="rounded-full border-gray-300 focus:ring-[#F2BA1D] cursor-pointer"
         />
         <label htmlFor="accept" className="cursor-pointer">
@@ -38,17 +43,22 @@ export default function LandingPage() {
       </div>
 
       {/* Navigation buttons */}
-      <div className="flex flex-col sm:flex-row items-center gap-3 text-sm font-semibold w-full sm:w-auto">
-        <Link className="p-2 border-2 border-[#F2BA1D] rounded-xl w-full sm:w-[200px] transition-all duration-300 ease-in-out hover:bg-[#F2BA1D] hover:text-[#08183A] hover:shadow-lg hover:scale-105">
-          Already have an account?
-        </Link>
-        <Link
-          to="/setup"
-          className="flex items-center justify-center gap-2 p-2 bg-[#F2BA1D] text-[#08183A] uppercase rounded-xl w-full sm:w-[200px] transition-all duration-300 ease-in-out hover:bg-[#d89d12] hover:text-white hover:shadow-lg hover:scale-105"
-        >
-          Next <ArrowRight className="h-5 w-5" />
-        </Link>
-      </div>
+      {checked && (
+        <div className="flex flex-col sm:flex-row items-center gap-3 text-sm font-semibold w-full sm:w-auto">
+          <Link
+            to="/auth/login"
+            className="p-2 border-2 border-[#F2BA1D] rounded-xl w-full sm:w-[200px] transition-all duration-300 ease-in-out hover:bg-[#F2BA1D] hover:text-[#08183A] hover:shadow-lg hover:scale-105"
+          >
+            Already have an account?
+          </Link>
+          <Link
+            to="/setup"
+            className="flex items-center justify-center gap-2 p-2 bg-[#F2BA1D] text-[#08183A] uppercase rounded-xl w-full sm:w-[200px] transition-all duration-300 ease-in-out hover:bg-[#d89d12] hover:text-white hover:shadow-lg hover:scale-105"
+          >
+            Next <ArrowRight className="h-5 w-5" />
+          </Link>
+        </div>
+      )}
     </main>
   );
 }
