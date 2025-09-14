@@ -20,10 +20,7 @@ A **responsive web-based School Management System** that helps schools digitally
 ## 🛠 Tech Stack
 
 - **Frontend:** React, Tailwind CSS
-- **State Management:** React Hooks / Context API (or Redux if used)
-- **Backend:** Node.js + Express.js (if included)
-- **Database:** MongoDB / MySQL (depending on your choice)
+- **State Management:** React Hooks / Context API
 - **Authentication:** JWT / LocalStorage-based authentication
-- **APIs:** REST APIs for CRUD operations
 
 ---
