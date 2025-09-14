@@ -3,9 +3,16 @@ import { NavLink } from "react-router-dom";
 import Sidelink from "./Sidelink";
 import { sideLinksData } from "./academicData";
 
-export default function SecondSidebar() {
+export default function SecondSidebar({ sidebarOpen, onCloseSidebar }) {
   return (
-    <aside className="w-60 flex-none overflow-y-auto bg-[#08183A] px-3 py-4 flex flex-col gap-3 text-white">
+    <aside
+      className={`
+        fixed inset-y-0 left-0 z-40 w-60 bg-[#08183A] px-3 py-4 flex flex-col gap-3 text-white transform transition-transform duration-300
+        ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
+        md:static md:translate-x-0 md:flex
+      `}
+    >
+      {/* Header (Name + Close Icon on mobile) */}
       <div className="flex items-center justify-between space-x-2">
         <NavLink
           to="/profile"
@@ -13,11 +20,25 @@ export default function SecondSidebar() {
         >
           Roqeeb Taiwo
         </NavLink>
-        <MenuIcon className="text-white cursor-pointer ml-3" />
+
+        {/* Hide the close button on desktop */}
+        <MenuIcon
+          onClick={onCloseSidebar}
+          className="text-white cursor-pointer ml-3 md:hidden"
+        />
       </div>
-      {sideLinksData.map((entry) => {
-        return <Sidelink to={entry.to} icon={entry.icon} label={entry.label} />;
-      })}
+
+      {/* Sidebar links */}
+      <div className="mt-4 flex flex-col gap-2">
+        {sideLinksData.map((entry, idx) => (
+          <Sidelink
+            key={idx}
+            to={entry.to}
+            icon={entry.icon}
+            label={entry.label}
+          />
+        ))}
+      </div>
     </aside>
   );
 }

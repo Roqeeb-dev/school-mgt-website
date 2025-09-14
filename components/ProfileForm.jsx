@@ -62,8 +62,13 @@ export default function ProfileForm() {
             { label: "Father's Name", name: "fatherName", type: "text" },
             { label: "Mother's Name", name: "motherName", type: "text" },
           ].map((field) => (
-            <div key={field.name} className="flex items-center gap-4">
-              <label className="w-32 text-sm font-medium">{field.label}</label>
+            <div
+              key={field.name}
+              className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4"
+            >
+              <label className="text-sm font-medium w-full md:w-32">
+                {field.label}
+              </label>
               <input
                 type={field.type}
                 name={field.name}
@@ -75,8 +80,10 @@ export default function ProfileForm() {
           ))}
 
           {/* Address */}
-          <div className="flex items-start gap-4">
-            <label className="w-32 text-sm font-medium mt-2">Address</label>
+          <div className="flex flex-col md:flex-row md:items-start gap-2 md:gap-4">
+            <label className="text-sm font-medium w-full md:w-32">
+              Address
+            </label>
             <textarea
               name="address"
               value={formData.address}
@@ -87,8 +94,8 @@ export default function ProfileForm() {
           </div>
 
           {/* Gender */}
-          <div className="flex items-center gap-4">
-            <label className="w-32 text-sm font-medium">Gender</label>
+          <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+            <label className="text-sm font-medium w-full md:w-32">Gender</label>
             <div className="flex gap-4">
               {["Male", "Female", "Others"].map((g) => (
                 <label key={g} className="flex items-center gap-2">
@@ -106,8 +113,10 @@ export default function ProfileForm() {
           </div>
 
           {/* Pincode */}
-          <div className="flex items-center gap-4">
-            <label className="w-32 text-sm font-medium">Pincode</label>
+          <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+            <label className="text-sm font-medium w-full md:w-32">
+              Pincode
+            </label>
             <input
               type="text"
               name="pincode"
@@ -118,8 +127,8 @@ export default function ProfileForm() {
           </div>
 
           {/* State */}
-          <div className="flex items-center gap-4">
-            <label className="w-32 text-sm font-medium">State</label>
+          <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+            <label className="text-sm font-medium w-full md:w-32">State</label>
             <select
               name="state"
               value={formData.state}
@@ -145,8 +154,13 @@ export default function ProfileForm() {
             { label: "Blood Group", name: "bloodGroup", type: "text" },
             { label: "Any Abilities", name: "abilities", type: "text" },
           ].map((field) => (
-            <div key={field.name} className="flex items-center gap-4">
-              <label className="w-32 text-sm font-medium">{field.label}</label>
+            <div
+              key={field.name}
+              className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4"
+            >
+              <label className="text-sm font-medium w-full md:w-32">
+                {field.label}
+              </label>
               <input
                 type={field.type}
                 name={field.name}
