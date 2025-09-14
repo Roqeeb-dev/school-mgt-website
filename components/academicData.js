@@ -93,22 +93,34 @@ export const MySchoolData = [
 
 export const sideLinksData = [
   { to: "/dashboard", icon: Eye, label: "Dashboard" },
-  { to: "/my-school", icon: Database, label: "My School" },
+  { to: "/my-school", icon: Database, label: "My School", comingSoon: true },
   {
     to: "/management-dashboard",
     icon: LayoutDashboard,
     label: "Management Dashboard",
+    comingSoon: true,
   },
-  { to: "/users-management", icon: Users, label: "Users Management" },
-  { to: "/supports", icon: LifeBuoy, label: "Supports" },
-  { to: "/organization", icon: Building2, label: "Organization" },
-  { to: "/settings", icon: Settings, label: "Settings" },
+  {
+    to: "/users-management",
+    icon: Users,
+    label: "Users Management",
+    comingSoon: true,
+  },
+  { to: "/supports", icon: LifeBuoy, label: "Supports", comingSoon: true },
+  {
+    to: "/organization",
+    icon: Building2,
+    label: "Organization",
+    comingSoon: true,
+  },
+  { to: "/settings", icon: Settings, label: "Settings", comingSoon: true },
   { to: "/dashboard/billing", icon: CreditCard, label: "Billing" },
   { to: "/dashboard/profile", icon: User, label: "Profiles" },
   {
     to: "/organization-profile",
     icon: Briefcase,
     label: "Organization Profile",
+    comingSoon: true,
   },
 ];
 

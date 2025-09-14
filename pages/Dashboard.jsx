@@ -14,7 +14,7 @@ export default function Dashboard() {
 
       {/* Content area takes remaining height */}
       <div className="flex flex-1 overflow-hidden">
-        <SecondSidebar
+        <Sidebar
           sidebarOpen={sidebarOpen}
           onCloseSidebar={() => setSidebarOpen(false)}
         />

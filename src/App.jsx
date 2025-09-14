@@ -23,7 +23,7 @@ import Billing from "../components/Billing";
 import Addon from "../components/Addon";
 import ComingSoon from "../components/ComingSoonPage";
 import StudentLeaves from "../components/StudentLeave";
-import { academicData } from "../components/academicData";
+import { academicData, sideLinksData } from "../components/academicData";
 import { UserProvider } from "../context/userContext";
 import ProfileForm from "../components/ProfileForm";
 
@@ -71,6 +71,16 @@ function App() {
           </Route>
         </Route>
         {academicData
+          .filter((item) => item.comingSoon)
+          .map((item, index) => (
+            <Route
+              key={index}
+              path={item.to}
+              element={<ComingSoon message={`${item.label} Coming Soon`} />}
+            />
+          ))}
+
+        {sideLinksData
           .filter((item) => item.comingSoon)
           .map((item, index) => (
             <Route

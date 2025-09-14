@@ -21,10 +21,9 @@ export default function SecondSidebar({ sidebarOpen, onCloseSidebar }) {
           Roqeeb Taiwo
         </NavLink>
 
-        {/* Hide the close button on desktop */}
         <MenuIcon
           onClick={onCloseSidebar}
-          className="text-white cursor-pointer ml-3 md:hidden"
+          className="text-white cursor-pointer ml-3"
         />
       </div>
 
